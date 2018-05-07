@@ -7,7 +7,13 @@
     <nav class="nav">
       <div class="nav-container">
         <a href="{{ site.baseurl }}/">
-          <h2 class="nav-title">{{ site.title }}</h2>
+          {% if site.logo %}
+          <img style="height:1.8em; margin:0; margin-bottom: -0.4rem; /*margin is fix for concrete fsifn-logo*/"
+            src="{{ site.logo | relative_url }}" alt="{{ site.title }}">
+          {% else %}
+          <h1 class="nav-title">{{ site.title }}</h1>
+          {% endif %}
+          <!-- <h1 class="nav-title" style="font-size:5rem;">{{ site.title }}</h1> -->
         </a>
         <ul>
           <li><a href="{{ '/about' | prepend: site.baseurl }}">About</a></li>

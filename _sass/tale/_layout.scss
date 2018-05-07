@@ -17,8 +17,16 @@ footer,
   box-shadow: 0 2px 2px -2px $shadow-color;
   overflow: auto;
 
+  min-height: 67px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   &-container {
-    margin: 1rem auto;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
     position: relative;
     text-align: center;
   }
@@ -38,7 +46,7 @@ footer,
 
   ul {
     list-style-type: none;
-    margin: 1rem 0 0;
+    margin: 0;
     padding: 0;
     text-align: center;
   }
@@ -48,7 +56,7 @@ footer,
     color: $default-color;
     display: inline-block;
     opacity: .6;
-    padding: 0 2rem 0 0;
+    padding: 0 2rem 0 0; // right-padding
 
     &:last-child {
       padding-right: 0;
@@ -73,9 +81,11 @@ footer,
     }
 
     ul {
+      /*
       bottom: 0;
       position: absolute;
       right: 0;
+      */
     }
   }
 }
